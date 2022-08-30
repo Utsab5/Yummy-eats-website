@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,700&display=swap');/*copy*/
+
+body{
+
+    font-family: 'Montserrat', sans-serif;/*copy*/
+    margin: 0;
+}
+
+.hero-bg {
+    background: #307D99 url('../images/bg.jpg');
+    background-position: 22% 83% ;
+    color: white; /* colour of texts */    
+    text-align: center;
+    padding-bottom:4em;/*absolute unit=px    relative unit=em*/
+}
+
+header{
+     /* top right bottom left...just like a clock*/
+     padding: 1em 0;/* (top and bottom) (right and left)*/
+
+}
+
+.hero-bg a { /* to change all the "a" tags presnt in hero-bg*/
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /*rem=unit of font size*/
+}
+
+section {
+    margin: 0 1em;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em 0;
+}
+
+h1 span {
+    text-transform: uppercase;
+    display: block; /* gives the string a separate line*/
+    font-size: 1.4rem;
+}
+
+.hero-bg p{
+    font-weight: bold;
+    margin : 0 1em 3em;/*top right bottom*/
+
+}
+
+.form-container {
+    background-color: white;
+    margin: 2em 0 0;
+    padding: 2em;
+}
+
+label {
+    color: #2d7d98;
+    font-weight: bold;
+    display: block;
+    margin: 0 0 1em;
+    font-size: 1.2rem;
+}
+
+input[type=text] {
+    border: 1px solid #46030d;
+    width: 100%;
+    box-sizing:border-box;/*whats this?*/
+    padding:1em;
+    border-radius: .6em;
+    margin-top:1.2em;
+}
+
+.form-container p {
+    color:grey;
+    margin-top: .3em;
+    margin-bottom: 1.5em;
+    font-weight:normal;
+    font-size: .9rem;
+}
+
+input[type=button] {
+    background-color: #F89104 ;
+    border :none;
+    color:white;
+    font-weight: bold;
+    width: 100%;
+    padding:1em 0;
+    border-radius: .6em;
+    margin-top:1.2em;
+    font-size:1.3em;
+    cursor:pointer;
+    box-sizing:border-box;
+}
+
+input[type=button]:hover{
+    background-color: #e38707;
+}
+
+.authentic {
+    margin : 0;
+}
+
+.right-column {
+    text-align: center;
+    margin: 3em 1em ;
+
+}
+
+h2{
+    text-transform: uppercase;
+
+}
+
+img {
+    width:100%;
+}
+
+p{
+    line-height: 2em;
+}
+
+
+.overlay {
+    position: absolute;
+    height:100vh;
+    width: 100% ;
+    background: rgba(0,0,0,.9);
+    z-index:1; /* to keep the overlay infront of the animation*/
+    place-content: center;
+    color:white;
+    display:none; 
+    opacity: 0;
+
+}
+
+.animate-overlay {
+    animation: overlay 3s forwards;
+}
+
+
+@media (min-width: 730px){
+    
+    section {
+        margin: 0 4em;
+    }
+    .form-container{
+        margin: 2em 0em 0; 
+    }
+
+}
+
+@media (min-width: 930px){
+    
+    .hero-bg {
+            
+        text-align: left;        
+    }
+    .hero-bg a{
+        margin: 0 0 0 4em;
+    }
+
+    h1 {
+        margin: 2em 0 1.2em 2em;
+    }
+
+    .hero-bg p{
+       
+        margin : 0 5em 3em;
+    
+    }
+
+    .form-container {
+        margin: 4em 10em 0 5em;
+        border-radius: 1em;
+        box-shadow: 10px 10px 5px rgba(0,0,0,.3);/*x y blur colour(_,_,_, opacity)*/
+        
+    }
+
+    .form-container p {
+        margin-top: .3em;
+        margin-left : 0;
+        margin-bottom: 1.5em;
+        font-weight:normal;
+        font-size: .9rem;
+    }
+
+    form {
+        display: flex; /* can be done by flex & grid */
+    }
+
+    .form-left {
+        width:70%;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    input[type="button"] {
+        height: fit-content;
+        font-size:1.1em ;
+        margin-left: 1em;
+        margin-top: 2.2em;
+        padding: .76em 0;
+        width:30%;
+    }
+
+    .hero-bg p {
+        margin-bottom: 0;
+    }
+
+    section.authentic {
+        display:grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: "food content";/*naming*/
+
+    }
+
+    /* to swap*/
+    .right-column {
+        grid-area: content;
+        padding: 0 10%;
+        text-align: left;
+    }
+     
+    img {
+        grid-area: food ;
+    }
+    /*adjusting margin*/
+    h2 {
+        text-align: center;
+        margin: 0 1em;
+    }
+
+}
+
+/*ANIMATING*/
+
+.top {
+    animation: fadeIn 3s forwards ;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8);
+    }   
+    to {
+        opacity: 1;
+        transform: translateY(+8);
+
+    } 
+}
+
+@keyframes overlay {
+
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity:1;
+    }
+    70% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}

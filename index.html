@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="overlay" id="overlay">
+        <h3>Searching...</h3>
+
+    </div>
+
+    <div class="hero-bg">
+        <secion class="top">
+                <header>
+                    <a href="#">Yummy.eats</a>
+
+                    <!-- <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>    
+                                                        
+                        </ul>
+                    </nav> -->
+
+
+                    <h1><span>The Healthy</span> Eating Experience</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam illo ipsam totam recusandae, deleniti a voluptas magni quas reiciendis beatae!</p>
+
+                    <div class="form-container">
+                        <form action="">
+
+                            <div class="form-left">
+                                    <label for="city1">Enter your city:</label>
+                                    <input type="text" name="city" id="city1">
+                                    <p>Example: "Kolkata"</p>
+
+                            </div>                            
+
+                            <input type="button" value="Find food Now" id="action-btn">
+
+                        </form>
+                    </div>
+                </header>
+       
+
+        </section>
+    </div>
+
+    <section class="authentic">
+        <div class="right-column">
+            <h2>Authentic.Awsome</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam quia aspernatur eum voluptates? Consectetur illo aspernatur, tempora voluptatibus ut reprehenderit veniam dolorem saepe nisi temporibus provident? Sapiente nemo dolorum nisi optio natus molestias soluta hic aspernatur reprehenderit non tempora, maxime sunt ut, sit saepe ipsa. Dolor eum voluptatem laboriosam.</p>
+        </div>
+        <img src="images/food.jpg" alt="picture of food">
+    </section>
+
+
+    <script>
+
+
+        let btn= document.getElementById('action-btn');
+        let overlay= document.getElementById('overlay');
+        btn.addEventListener('click' , ()=>{
+
+            overlay.style.display = 'grid';
+            overlay.classList.add('animate-overlay')
+        });
+
+    </script>
+
+</body>
+</html>
